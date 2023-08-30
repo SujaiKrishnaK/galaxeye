@@ -1,0 +1,13 @@
+version: '3'
+services:
+  frontend:
+    image: node:14  
+    container_name: react-app
+    working_dir: /app
+    volumes:
+      - ./frontend:/app   
+    ports:
+      - "3000:3000"   
+    environment:
+      - NODE_ENV=development
+    command: ["npm", "start"]
